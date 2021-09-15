@@ -9,7 +9,9 @@
 # 部署
 ## need
 ├── Cinebench-R15-Loop-test-main.zip
+
 ├── Cinebench_R15_MAXON.zip
+
 └── python-3.8.10-amd64.exe
 
 ## 安装环境
