@@ -2,7 +2,7 @@ import os
 import pyecharts.options as opts
 from pyecharts.charts import Line
 
-print('请将此脚本放到R15根目录中')
+print('请将此脚本放到R23根目录中')
 cmd0 = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >pyR15.txt'
 cmd = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >>pyR15.txt'
 
