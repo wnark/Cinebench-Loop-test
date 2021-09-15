@@ -3,22 +3,22 @@ import pyecharts.options as opts
 from pyecharts.charts import Line
 
 print('请将此脚本放到R23根目录中')
-cmd0 = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >pyR15.txt'
-cmd = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >>pyR15.txt'
+cmd0 = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >pyR23.txt'
+cmd = os.getcwd() + r'\"CINEBENCH Windows 64 Bit".exe -cb_cpux >>pyR23.txt'
 
 choice = input('输入y开始循环，输入n读取文件')
 if choice == 'y':
-    times = input('请输入R15循环的次数 \n')
+    times = input('请输入R23循环的次数 \n')
     os.system(cmd0)
     for i in range(int(times) - 1):
         os.system(cmd)
         print('已经完成第', i + 1, '次')
 else:
-    print('请将txt文本文档改名为pyR15 将会自动生成')
+    print('请将txt文本文档改名为pyR23 将会自动生成')
     k = input('输入任意值开始生成')
 
 print('正在生成曲线图')
-with open('pyR15.txt', 'r') as f:
+with open('pyR23.txt', 'r') as f:
     lines = f.readlines()
     data = [x for i, x in enumerate(lines) if x.find('Rendering (Multiple CPU)') != -1]
 nums = len(data)
@@ -50,10 +50,10 @@ line = (Line(init_opts=opts.InitOpts(bg_color="#9AC0CD"))
     markline_opts=opts.MarkLineOpts(
         data=[opts.MarkLineItem(type_="average", name="平均值"),
               ]),
-    series_name="R15循环跑分成绩",
+    series_name="R23循环跑分成绩",
     y_axis=y,
 )
 )
 
-line.render('R15曲线图.html')
-os.startfile('R15曲线图.html')
+line.render('R23曲线图.html')
+os.startfile('R23曲线图.html')

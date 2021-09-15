@@ -1,0 +1,3 @@
+Number of Cores in This Machine: 
+Cinebench R23 Multi core Score: 
+Cinebench R23 Single core Score: 
